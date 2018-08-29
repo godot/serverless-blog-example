@@ -37,9 +37,9 @@ jobs:
       - run: npm test
       - run: npm run build
       - persist_to_workspace:
-        root: ~/repo
-        paths:
-          - dist/*
+          root: ~/repo
+          paths:
+            - dist/*
   # build job omitted for brevity
   deploy:
     docker:

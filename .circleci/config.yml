@@ -36,3 +36,15 @@ jobs:
       # run tests!
       - run: npm test
       - run: npm run build
+  # build job omitted for brevity
+  deploy:
+    docker:
+      - image: circleci/python:2.7-jessie
+    working_directory: ~/circleci-docs
+    steps:
+      - run:
+          name: Install awscli
+          command: sudo pip install awscli
+      - run:
+          name: Deploy to S3
+          command: aws s3 sync dist s3://blog-example-production/ --delete

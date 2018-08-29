@@ -46,7 +46,7 @@ jobs:
       - image: circleci/python:2.7-jessie
     working_directory: ~/repo
     steps:
-      - attach_to_workspace:
+      - attach_workspace:
           at: ~/repo/tmp
       - run:
           name: Install awscli

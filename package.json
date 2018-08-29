@@ -1,0 +1,27 @@
+{
+  "name": "serverless-blog-example",
+  "version": "1.0.0",
+  "description": "serverless-blog-example",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo 'test passed'",
+    "build": "NODE_ENV=production node node_modules/.bin/webpack && cp src/index.html dist/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/godot/serverless-blog-example.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/godot/serverless-blog-example/issues"
+  },
+  "homepage": "https://github.com/godot/serverless-blog-example#readme",
+  "devDependencies": {
+    "webpack": "^4.17.1",
+    "webpack-cli": "^3.1.0"
+  },
+  "dependencies": {
+    "axios": "^0.18.0"
+  }
+}

@@ -47,7 +47,7 @@ jobs:
     working_directory: ~/repo
     steps:
       - attach_to_workspace:
-        at: ~/repo/tmp
+          at: ~/repo/tmp
       - run:
           name: Install awscli
           command: sudo pip install awscli
